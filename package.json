@@ -1,8 +1,8 @@
 {
   "name": "brain-games-by-verlevina",
-  "version": "1.2.11",
+  "version": "1.2.13",
   "description": "В рамках проекта необходимо реализовать набор мини-игр, запускаемых из консоли. Эти игры похожи на то, что обычно называют Brain Games",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Verlevina/project-lvl1-s388#readme",
   "bin": {
-    "brain-games": "./dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "files": [
     "dist"
