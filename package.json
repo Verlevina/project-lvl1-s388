@@ -1,8 +1,7 @@
 {
   "name": "brain-games-by-verlevina",
   "version": "1.2.1",
-  "description": "",
-  "main": "index.js",
+  "description": "В рамках проекта необходимо реализовать набор мини-игр, запускаемых из консоли. Эти игры похожи на то, что обычно называют Brain Games",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -20,9 +19,6 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
-  "targets": {
-    "node": "current"
-  },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
@@ -30,10 +26,15 @@
     "@babel/preset-env": "^7.1.6",
     "cross-env": "^5.2.0"
   },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "readline-sync": "^1.4.9"
-  }
+  "keywords": [
+    "brain-games",
+    "verlevina",
+    "game"
+  ]
 }
