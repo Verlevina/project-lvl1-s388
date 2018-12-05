@@ -2,7 +2,7 @@
   "name": "brain-games-by-verlevina",
   "version": "1.2.13",
   "description": "В рамках проекта необходимо реализовать набор мини-игр, запускаемых из консоли. Эти игры похожи на то, что обычно называют Brain Games",
-  "main": "dist/index.js",
+
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -40,16 +40,8 @@
     "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-babel": "^5.2.1",
-    "eslint-plugin-flowtype": "^3.1.1",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.26.2",
-    "eslint-plugin-lodash-fp": "^2.2.0-a1",
-    "flow-bin": "^0.84",
-    "flow-typed": "^2.5.1",
-    "gulp-babel": "^8.0.0",
-    "jest": "^23.6.0",
-    "jest-cli": "^23.6.0"
+    "flow-bin": "^0.84"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"
