@@ -10,3 +10,6 @@ publish:
 
 lint:
 	npx eslint .
+
+game-even:
+	npx babel-node -- src/bin/brain-even.js
