@@ -4,7 +4,6 @@ import getRandomNumbers from '../util';
 
 const MIN = 1;
 const MAX = 100;
-
 const gcdGameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findCommonDivider = (firstNumber, secondNumber, count) => {

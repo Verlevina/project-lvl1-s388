@@ -2,7 +2,6 @@ import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
 import getRandomNumbers from '../util';
 
-
 const MIN = 1;
 const MAX = 100;
 const evenGameDescription = 'Answer "yes" if number even otherwise answer "no".';

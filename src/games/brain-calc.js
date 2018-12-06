@@ -6,7 +6,6 @@ const MIN = 1;
 const MAX = 100;
 const calcGameDescription = 'What is the result of the expression?';
 
-
 const questionPairGenerate = () => {
   const firstNumber = getRandomNumbers(MIN, MAX);
   const secondNumber = getRandomNumbers(MIN, MAX);

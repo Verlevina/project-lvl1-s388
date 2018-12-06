@@ -11,11 +11,9 @@ const level = (count, questionPairGenerate, userName) => {
   }
 
   let result;
-
   const questionPair = questionPairGenerate();
 
   console.log(`Question: ${car(questionPair)}`);
-
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (userAnswer === cdr(questionPair)) {
@@ -30,6 +28,7 @@ const level = (count, questionPairGenerate, userName) => {
     const count1 = count - 1;
     return level(count1, questionPairGenerate, userName);
   }
+
   return false;
 };
 
