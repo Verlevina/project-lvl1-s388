@@ -5,18 +5,18 @@ import getRandomNumbers from '../util';
 const MIN = 1;
 const MAX = 10;
 const countOperation = 3;
-const startCountOperation = 1;
+const startCountOperation = 0;
 const calcGameDescription = 'What is the result of the expression?';
 const getSign = (num) => {
   let pair;
   switch (num) {
-    case 1:
+    case 0:
       pair = cons('+', (a, b) => a + b);
       break;
-    case 2:
+    case 1:
       pair = cons('-', (a, b) => a - b);
       break;
-    case 3:
+    case 2:
       pair = cons('*', (a, b) => a * b);
       break;
     default:
