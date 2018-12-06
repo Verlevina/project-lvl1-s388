@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
-import { greeting, welcome } from './welcome';
 import { car, cdr } from 'hexlet-pairs';
+import { greeting, welcome } from './welcome';
 
 const LEVEL_COUNT = 3;
 
 const level = (count, questionPairGenerate, userName) => {
-
   if (!count) {
     console.log(`Congratulations, ${userName}!`);
     return true;

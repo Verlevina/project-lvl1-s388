@@ -1,6 +1,6 @@
+import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
 import getRandomNumbers from '../util';
-import { cons } from 'hexlet-pairs';
 
 
 const MIN = 1;
@@ -15,6 +15,4 @@ const questionPairGenerate = () => {
   return cons(question, trueAnswer);
 };
 
-export default  () => gameTemplate(questionPairGenerate, evenGameDescription);
-
-
+export default () => gameTemplate(questionPairGenerate, evenGameDescription);
