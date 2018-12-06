@@ -4,7 +4,7 @@ import getRandomNumbers from '../util';
 
 const MIN = 1;
 const MAX = 10;
-const countOperation = 4;
+const countOperation = 3;
 const startCountOperation = 1;
 const calcGameDescription = 'What is the result of the expression?';
 const getSign = (num)=> {
@@ -18,9 +18,6 @@ const getSign = (num)=> {
         break;
       case 3:
         pair = cons('*', (a, b)=> a * b);
-        break;
-      case 4:
-        pair = cons('/', (a, b)=> a / b);
         break;
     }
     return pair;
