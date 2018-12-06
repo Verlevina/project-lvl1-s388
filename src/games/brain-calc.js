@@ -7,20 +7,20 @@ const MAX = 10;
 const countOperation = 3;
 const startCountOperation = 1;
 const calcGameDescription = 'What is the result of the expression?';
-const getSign = (num)=> {
+const getSign = (num) => {
   let pair;
-    switch(num) {
-      case 1:
-        pair = cons('+', (a, b)=> a + b);
-        break;
-      case 2:
-        pair = cons('-', (a, b)=> a - b);
-        break;
-      case 3:
-        pair = cons('*', (a, b)=> a * b);
-        break;
-    }
-    return pair;
+  switch (num) {
+    case 1:
+      pair = cons('+', (a, b) => a + b);
+      break;
+    case 2:
+      pair = cons('-', (a, b) => a - b);
+      break;
+    case 3:
+      pair = cons('*', (a, b) => a * b);
+      break;
+  }
+  return pair;
 };
 
 const questionPairGenerate = () => {
