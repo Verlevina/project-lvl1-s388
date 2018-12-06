@@ -19,6 +19,7 @@ const getSign = (num) => {
     case 3:
       pair = cons('*', (a, b) => a * b);
       break;
+    default:
   }
   return pair;
 };
