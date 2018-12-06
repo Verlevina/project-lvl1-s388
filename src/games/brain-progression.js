@@ -23,7 +23,7 @@ const getPair = (progressionValue, questionPosition, step, answer, count = 0, qu
     newQuestion += ` ${progressionValue} `;
   }
   newProgressionValue += step;
-  return getQuestion(newProgressionValue, questionPosition, step, newAnswer, newCount, newQuestion);
+  return getPair(newProgressionValue, questionPosition, step, newAnswer, newCount, newQuestion);
 };
 
 const questionPairGenerate = () => {
