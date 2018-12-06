@@ -1,14 +1,11 @@
-import readlineSync from 'readline-sync';
-import {gameTemplate, levelTemplate} from '../game-template';
+import { gameTemplate, levelTemplate } from '../game-template';
 import getRandomNumbers from '../random-numbers';
 
 const MIN = 1;
 const MAX = 100;
 const levelCount = 3;
 const calcGameDescription = 'What is the result of the expression?';
-const realResult = (question) => {
 
-};
 const calcLevel = (userName) => {
   const firstNumber = getRandomNumbers(MIN, MAX);
   const secondNumber = getRandomNumbers(MIN, MAX);
