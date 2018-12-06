@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Verlevina/project-lvl1-s388#readme",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
+    "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
