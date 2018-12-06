@@ -1,29 +1,30 @@
-import { gameTemplate, levelTemplate } from '../game-template';
+import gameTemplate from '../game-template';
 import getRandomNumbers from '../random-numbers';
+import { cons } from 'hexlet-pairs';
 
 const MIN = 1;
 const MAX = 100;
-const levelCount = 3;
+
 const evenGameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findCommonDivider = (firstNumber, secondNumber, count) => {
   if (firstNumber % count === 0 && secondNumber % count === 0) {
     return count.toString();
   } else {
-    const newCount = count -1;
+    const newCount = count - 1;
     return findCommonDivider(firstNumber, secondNumber, newCount)
   }
 };
-
-const evenLevel = (userName) => {
+const questionPairGenerate = () => {
   const firstNumber = getRandomNumbers(MIN, MAX);
   const secondNumber = getRandomNumbers(MIN, MAX);
   const question = ` ${firstNumber} ${secondNumber}`;
   const minNumber = (firstNumber < secondNumber) ? firstNumber : secondNumber;
   const trueAnswer = findCommonDivider(firstNumber, secondNumber, minNumber);
-  return levelTemplate(userName, question, trueAnswer);
+  return cons(question, trueAnswer);
 };
+
 const startGame = () => {
-  gameTemplate(levelCount, evenLevel, evenGameDescription);
+  gameTemplate(questionPairGenerate, evenGameDescription);
 };
 export default startGame;

@@ -1,34 +1,38 @@
 import readlineSync from 'readline-sync';
 import { greeting, welcome } from './welcome';
+import { car, cdr } from 'hexlet-pairs';
 
-const levelTemplate = (userName, question, trueAnswer) => {
-  console.log(`Question: ${question}`);
+const LEVEL_COUNT = 3;
+
+const levelTemplate = (userName, questionPairGenerate) => {
+  const questionPair = questionPairGenerate();
+  console.log(`Question: ${car(questionPair)}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (userAnswer === trueAnswer) {
+  if (userAnswer === cdr(questionPair)) {
     console.log('Correct!');
     return true;
   }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. Let's try again, ${userName}!`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${cdr(questionPair)}'. Let's try again, ${userName}!`);
   return false;
 };
 
-const level = (count, currentGame, userName) => {
+const level = (count, questionPairGenerate, userName) => {
   if (!count) {
     console.log(`Congratulations, ${userName}!`);
     return true;
   }
-  const result = currentGame(userName);
+  const result = levelTemplate(userName, questionPairGenerate);
   if (result) {
     const count1 = count - 1;
-    return level(count1, currentGame, userName);
+    return level(count1, questionPairGenerate, userName);
   }
   return false;
 };
 
-const gameTemplate = (count, currentGame, gameDescription) => {
+const gameTemplate = (questionPairGenerate, gameDescription) => {
   welcome();
   console.log(gameDescription);
   const userName = greeting();
-  level(count, currentGame, userName);
+  level(LEVEL_COUNT, questionPairGenerate, userName);
 };
-export { gameTemplate, levelTemplate };
+export default gameTemplate;
