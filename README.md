@@ -10,3 +10,7 @@
 Установка пакета игр и запуск игры brain-calc:
 
 [![asciicast](https://asciinema.org/a/PWWl6jlfhyAO4p9W17eExu9gt.svg)](https://asciinema.org/a/PWWl6jlfhyAO4p9W17eExu9gt)
+
+Установка пакета игр и запуск игры brain-gcd:
+
+[![asciicast](https://asciinema.org/a/WCegidwqvaZZe0bzzH6uAZQZ5.svg)](https://asciinema.org/a/WCegidwqvaZZe0bzzH6uAZQZ5)
