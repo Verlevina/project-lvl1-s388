@@ -1,4 +1,17 @@
 import { greeting, welcome } from './welcome';
+import readlineSync from "readline-sync";
+
+const levelTemplate = (userName, question, trueAnswer) => {
+  console.log(`Question: ${question}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  if (userAnswer === trueAnswer) {
+    console.log('Correct!');
+    return true;
+  } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'. Let's try again, ${userName}!`);
+    return false;
+  }
+};
 
 const level = (count, currentGame, userName) => {
   if (!count) {
@@ -19,4 +32,4 @@ const gameTemplate = (count, currentGame, gameDescription) => {
   const userName = greeting();
   level(count, currentGame, userName);
 };
-export default gameTemplate;
+export {gameTemplate, levelTemplate};
