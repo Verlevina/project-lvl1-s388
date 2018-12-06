@@ -5,7 +5,7 @@ import { cons } from 'hexlet-pairs';
 const MIN = 1;
 const MAX = 100;
 
-const evenGameDescription = 'Find the greatest common divisor of given numbers.';
+const gcdGameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findCommonDivider = (firstNumber, secondNumber, count) => {
   if (firstNumber % count === 0 && secondNumber % count === 0) {
@@ -15,6 +15,7 @@ const findCommonDivider = (firstNumber, secondNumber, count) => {
     return findCommonDivider(firstNumber, secondNumber, newCount)
   }
 };
+
 const questionPairGenerate = () => {
   const firstNumber = getRandomNumbers(MIN, MAX);
   const secondNumber = getRandomNumbers(MIN, MAX);
@@ -25,6 +26,6 @@ const questionPairGenerate = () => {
 };
 
 const startGame = () => {
-  gameTemplate(questionPairGenerate, evenGameDescription);
+  gameTemplate(questionPairGenerate, gcdGameDescription);
 };
 export default startGame;
