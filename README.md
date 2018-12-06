@@ -3,6 +3,6 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/Verlevina/project-lvl1-s388/test_coverage)
 [![Build Status](https://travis-ci.com/Verlevina/project-lvl1-s388.svg?branch=master)](https://travis-ci.com/Verlevina/project-lvl1-s388)
 
-Установка и запуск игры:
+Установка пакета игр и запуск игры brain-even:
 
-[![asciicast](https://asciinema.org/a/bO8l7iQVDWPRLutmjYqWcfPmX.svg)](https://asciinema.org/a/bO8l7iQVDWPRLutmjYqWcfPmX)
+[![asciicast](https://asciinema.org/a/CWtTxiBQOB25aPAjSu1L9EQSG.svg)](https://asciinema.org/a/CWtTxiBQOB25aPAjSu1L9EQSG)
