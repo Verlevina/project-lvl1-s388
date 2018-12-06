@@ -14,3 +14,7 @@
 Установка пакета игр и запуск игры brain-gcd:
 
 [![asciicast](https://asciinema.org/a/WCegidwqvaZZe0bzzH6uAZQZ5.svg)](https://asciinema.org/a/WCegidwqvaZZe0bzzH6uAZQZ5)
+
+Установка пакета игр и запуск игры brain-progressive:
+
+[![asciicast](https://asciinema.org/a/1DXMt1vYLkCGioN2KDo4mrxaT.svg)](https://asciinema.org/a/1DXMt1vYLkCGioN2KDo4mrxaT)
