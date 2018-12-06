@@ -1,18 +1,16 @@
-import readlineSync from 'readline-sync';
-import {greeting, welcome} from './welcome';
+import { greeting, welcome } from './welcome';
 
 const level = (count, currentGame, userName) => {
   if (!count) {
     console.log(`Congratulations, ${userName}!`);
     return true;
   }
-    const result = currentGame(userName);
+  const result = currentGame(userName);
   if (result) {
-    count -= 1;
-    level(count, currentGame, userName);
-  } else {
-    return false;
+    const count1 = count - 1;
+    return level(count1, currentGame, userName);
   }
+  return false;
 };
 
 const gameTemplate = (count, currentGame, gameDescription) => {

@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
@@ -9,4 +9,4 @@ const greeting = () => {
   return userName;
 };
 
-export {greeting, welcome};
+export { greeting, welcome };
