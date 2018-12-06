@@ -6,3 +6,7 @@
 Установка пакета игр и запуск игры brain-even:
 
 [![asciicast](https://asciinema.org/a/CWtTxiBQOB25aPAjSu1L9EQSG.svg)](https://asciinema.org/a/CWtTxiBQOB25aPAjSu1L9EQSG)
+
+Установка пакета игр и запуск игры brain-calc:
+
+[![asciicast](https://asciinema.org/a/PWWl6jlfhyAO4p9W17eExu9gt.svg)](https://asciinema.org/a/PWWl6jlfhyAO4p9W17eExu9gt)
