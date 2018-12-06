@@ -15,7 +15,4 @@ const questionPairGenerate = () => {
   return cons(question, trueAnswer);
 };
 
-const startGame = () => {
-  gameTemplate(questionPairGenerate, calcGameDescription);
-};
-export default startGame;
+export default  () => gameTemplate(questionPairGenerate, calcGameDescription);
