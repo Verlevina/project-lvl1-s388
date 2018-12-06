@@ -3,7 +3,7 @@ import gameTemplate from '../game-template';
 import getRandomNumbers from '../util';
 
 const MIN = 1;
-const MAX = 10;
+const MAX = 100;
 const countOperation = 3;
 const startCountOperation = 0;
 const calcGameDescription = 'What is the result of the expression?';
