@@ -1,5 +1,5 @@
 import gameTemplate from '../game-template';
-import getRandomNumbers from '../random-numbers';
+import getRandomNumbers from '../util';
 import { cons } from 'hexlet-pairs';
 
 const MIN = 1;
