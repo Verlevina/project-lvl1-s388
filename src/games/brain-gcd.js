@@ -1,10 +1,10 @@
 import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
-import getRandomNumbers from '../util';
+import getRandomNumber from '../utils';
 
 const MIN = 1;
 const MAX = 100;
-const gcdGameDescription = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const findCommonDivider = (firstNumber, secondNumber, count) => {
   if (firstNumber % count === 0 && secondNumber % count === 0) {
@@ -15,12 +15,12 @@ const findCommonDivider = (firstNumber, secondNumber, count) => {
 };
 
 const questionPairGenerate = () => {
-  const firstNumber = getRandomNumbers(MIN, MAX);
-  const secondNumber = getRandomNumbers(MIN, MAX);
+  const firstNumber = getRandomNumber(MIN, MAX);
+  const secondNumber = getRandomNumber(MIN, MAX);
   const question = ` ${firstNumber} ${secondNumber}`;
   const minNumber = (firstNumber < secondNumber) ? firstNumber : secondNumber;
   const trueAnswer = findCommonDivider(firstNumber, secondNumber, minNumber);
   return cons(question, trueAnswer);
 };
 
-export default () => gameTemplate(questionPairGenerate, gcdGameDescription);
+export default () => gameTemplate(questionPairGenerate, description);

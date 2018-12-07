@@ -1,37 +1,35 @@
-import { cons, car, cdr } from 'hexlet-pairs';
+import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
-import getRandomNumbers from '../util';
+import getRandomNumber from '../utils';
 
 const MIN = 1;
 const MAX = 100;
 const countOperation = 3;
 const startCountOperation = 0;
-const calcGameDescription = 'What is the result of the expression?';
-const getSign = (num) => {
-  let pair;
-  switch (num) {
+const description = 'What is the result of the expression?';
+const getSign = (signIndex, firstNumber, secondNumber) => {
+  let pairQuestion;
+  switch (signIndex) {
     case 0:
-      pair = cons('+', (a, b) => a + b);
+      pairQuestion = cons(firstNumber + '+' + secondNumber, (firstNumber  + secondNumber).toString());
       break;
     case 1:
-      pair = cons('-', (a, b) => a - b);
+      pairQuestion = cons(firstNumber + '-' + secondNumber, (firstNumber  - secondNumber).toString());
       break;
     case 2:
-      pair = cons('*', (a, b) => a * b);
+      pairQuestion = cons(firstNumber + '*' + secondNumber, (firstNumber  * secondNumber).toString());
       break;
     default:
   }
-  return pair;
+  return pairQuestion;
 };
 
 const questionPairGenerate = () => {
-  const firstNumber = getRandomNumbers(MIN, MAX);
-  const secondNumber = getRandomNumbers(MIN, MAX);
-  const randomNum = getRandomNumbers(startCountOperation, countOperation);
-  const signPair = getSign(randomNum);
-  const question = ` ${firstNumber} ${car(signPair)} ${secondNumber}`;
-  const trueAnswer = ((cdr(signPair))(firstNumber, secondNumber)).toString();
-  return cons(question, trueAnswer);
+  const firstNumber = getRandomNumber(MIN, MAX);
+  const secondNumber = getRandomNumber(MIN, MAX);
+  const signIndex = getRandomNumber(startCountOperation, countOperation);
+  const signPair = getSign(signIndex, firstNumber, secondNumber);
+  return signPair();
 };
 
-export default () => gameTemplate(questionPairGenerate, calcGameDescription);
+export default () => gameTemplate(questionPairGenerate, description);
