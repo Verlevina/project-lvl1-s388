@@ -12,8 +12,9 @@ const getPair = (progressionValue, questionPosition, step, answer, count = 0, qu
   let newAnswer = answer;
   let newQuestion = question;
   let newProgressionValue = progressionValue;
+  let questionPair = cons(question, answer);
   if (count === progressionLength) {
-    return cons(question, answer);
+    return questionPair;
   }
   const newCount = count + 1;
   if (count === questionPosition) {
