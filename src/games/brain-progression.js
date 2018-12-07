@@ -7,31 +7,23 @@ const MAX = 100;
 const progressionLength = 10;
 const description = 'What number is missing in the progression?';
 
-
-const getPair = (progressionValue, questionPosition, step, answer, count = 0, question = '') => {
-  let newAnswer = answer;
-  let newQuestion = question;
-  let newProgressionValue = progressionValue;
-  let questionPair = cons(question, answer);
-  if (count === progressionLength) {
-    return questionPair;
-  }
-  const newCount = count + 1;
-  if (count === questionPosition) {
-    newAnswer = progressionValue.toString();
-    newQuestion += ' .. ';
-  } else {
-    newQuestion += ` ${progressionValue} `;
-  }
-  newProgressionValue += step;
-  return getPair(newProgressionValue, questionPosition, step, newAnswer, newCount, newQuestion);
-};
-
 const questionPairGenerate = () => {
   const startProgression = getRandomNumber(MIN, MAX);
   const questionPosition = getRandomNumber(0, progressionLength);
   const step = getRandomNumber(MIN, MAX);
-  return getPair(startProgression, questionPosition, step);
+  let question = '';
+  let answer;
+  let progressionValue = startProgression;
+  for (let i = 0; i < progressionLength; i++) {
+    if (i === questionPosition) {
+      answer = progressionValue.toString();
+      question += ' .. ';
+    }else {
+      question += ` ${progressionValue} `;
+    }
+    progressionValue += step;
+  }
+  return cons(question, answer);
 };
 
 export default () => gameTemplate(questionPairGenerate, description);

@@ -6,12 +6,16 @@ const MIN = 1;
 const MAX = 100;
 const description = 'Find the greatest common divisor of given numbers.';
 
-const findgcd = (firstNumber, secondNumber, count = Math.min(firstNumber , secondNumber)) => {
-  if (firstNumber % count === 0 && secondNumber % count === 0) {
-    return count.toString();
+const findgcd = (firstNumber, secondNumber) => {
+  const minNumber = Math.min(firstNumber , secondNumber);
+  let gcd;
+  for (let i = minNumber; i > 0; i -= 1) {
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
+      gcd = i.toString();
+      break;
+    }
   }
-  const newCount = count - 1;
-  return findgcd(firstNumber, secondNumber, newCount);
+  return gcd;
 };
 
 const questionPairGenerate = () => {
