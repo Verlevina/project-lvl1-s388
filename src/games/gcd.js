@@ -7,7 +7,7 @@ const MAX = 100;
 const description = 'Find the greatest common divisor of given numbers.';
 
 const findgcd = (firstNumber, secondNumber) => {
-  const minNumber = Math.min(firstNumber , secondNumber);
+  const minNumber = Math.min(firstNumber, secondNumber);
   let gcd;
   for (let i = minNumber; i > 0; i -= 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {

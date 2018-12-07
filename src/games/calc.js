@@ -11,13 +11,13 @@ const getSign = (signIndex, firstNumber, secondNumber) => {
   let pairQuestion;
   switch (signIndex) {
     case 0:
-      pairQuestion = cons(firstNumber + '+' + secondNumber, (firstNumber  + secondNumber).toString());
+      pairQuestion = cons(`${firstNumber}+${secondNumber}`, (firstNumber + secondNumber).toString());
       break;
     case 1:
-      pairQuestion = cons(firstNumber + '-' + secondNumber, (firstNumber  - secondNumber).toString());
+      pairQuestion = cons(`${firstNumber}-${secondNumber}`, (firstNumber - secondNumber).toString());
       break;
     case 2:
-      pairQuestion = cons(firstNumber + '*' + secondNumber, (firstNumber  * secondNumber).toString());
+      pairQuestion = cons(`${firstNumber}*${secondNumber}`, (firstNumber * secondNumber).toString());
       break;
     default:
   }

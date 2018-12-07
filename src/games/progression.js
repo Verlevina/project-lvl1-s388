@@ -14,11 +14,11 @@ const questionPairGenerate = () => {
   let question = '';
   let answer;
   let progressionValue = startProgression;
-  for (let i = 0; i < progressionLength; i++) {
+  for (let i = 0; i < progressionLength; i += 1) {
     if (i === questionPosition) {
       answer = progressionValue.toString();
       question += ' .. ';
-    }else {
+    } else {
       question += ` ${progressionValue} `;
     }
     progressionValue += step;
