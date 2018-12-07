@@ -1,12 +1,13 @@
+import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
-import agreeQuestionPairGenerate from '../agreeGameTemplate';
+import getRandomNumber from '../utils';
 
 const min = 1;
 const max = 100;
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  for (let i = number - 1; i > 1; i -= 1) {
+  for (let i = 2; i < number / 2; i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -14,6 +15,10 @@ const isPrime = (number) => {
   return true;
 };
 
-const generateGameData = () => agreeQuestionPairGenerate(isPrime, min, max);
+const generateGameData = () => {
+  const question = getRandomNumber(min, max);
+  const trueAnswer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, trueAnswer);
+};
 
 export default () => gameTemplate(generateGameData, description);
