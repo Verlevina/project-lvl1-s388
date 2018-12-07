@@ -1,6 +1,5 @@
-import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
-import getRandomNumber from '../utils';
+import agreeQuestionPairGenerate from '../agreeGameTemplate';
 
 const MIN = 1;
 const MAX = 100;
@@ -15,10 +14,6 @@ const isPrime = (number) => {
   return true;
 };
 
-const questionPairGenerate = () => {
-  const question = getRandomNumber(MIN, MAX);
-  const trueAnswer = isPrime(question) ? 'yes' : 'no';
-  return cons(question, trueAnswer);
-};
+const questionPairGenerate = () => agreeQuestionPairGenerate(isPrime, MIN, MAX);
 
 export default () => gameTemplate(questionPairGenerate, description);
