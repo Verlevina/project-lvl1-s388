@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import gameTemplate from '../games/brain-calc';
+import gameTemplate from '../games/calc';
 
 gameTemplate();

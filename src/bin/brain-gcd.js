@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import gameTemplate from '../games/brain-gcd';
+import gameTemplate from '../games/gcd';
 
 gameTemplate();
