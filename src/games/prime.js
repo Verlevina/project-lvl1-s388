@@ -1,8 +1,8 @@
 import gameTemplate from '../game-template';
 import agreeQuestionPairGenerate from '../agreeGameTemplate';
 
-const MIN = 1;
-const MAX = 100;
+const min = 1;
+const max = 100;
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
@@ -14,6 +14,6 @@ const isPrime = (number) => {
   return true;
 };
 
-const questionPairGenerate = () => agreeQuestionPairGenerate(isPrime, MIN, MAX);
+const generateGameData = () => agreeQuestionPairGenerate(isPrime, min, max);
 
-export default () => gameTemplate(questionPairGenerate, description);
+export default () => gameTemplate(generateGameData, description);

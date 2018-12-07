@@ -2,15 +2,15 @@ import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
 import getRandomNumber from '../utils';
 
-const MIN = 1;
-const MAX = 100;
+const min = 1;
+const max = 100;
 const progressionLength = 10;
 const description = 'What number is missing in the progression?';
 
-const questionPairGenerate = () => {
-  const startProgression = getRandomNumber(MIN, MAX);
+const generateGameData = () => {
+  const startProgression = getRandomNumber(min, max);
   const questionPosition = getRandomNumber(0, progressionLength);
-  const step = getRandomNumber(MIN, MAX);
+  const step = getRandomNumber(min, max);
   let question = '';
   let answer;
   let progressionValue = startProgression;
@@ -26,4 +26,4 @@ const questionPairGenerate = () => {
   return cons(question, answer);
 };
 
-export default () => gameTemplate(questionPairGenerate, description);
+export default () => gameTemplate(generateGameData, description);

@@ -2,15 +2,15 @@ import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
 import getRandomNumber from '../utils';
 
-const MIN = 1;
-const MAX = 100;
+const min = 1;
+const max = 100;
 const countOperation = 3;
 const startCountOperation = 0;
 const description = 'What is the result of the expression?';
 
-const questionPairGenerate = () => {
-  const firstNumber = getRandomNumber(MIN, MAX);
-  const secondNumber = getRandomNumber(MIN, MAX);
+const generateGameData = () => {
+  const firstNumber = getRandomNumber(min, max);
+  const secondNumber = getRandomNumber(min, max);
   const signIndex = getRandomNumber(startCountOperation, countOperation);
   let pairQuestion;
   switch (signIndex) {
@@ -28,4 +28,4 @@ const questionPairGenerate = () => {
   return pairQuestion;
 };
 
-export default () => gameTemplate(questionPairGenerate, description);
+export default () => gameTemplate(generateGameData, description);

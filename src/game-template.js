@@ -2,14 +2,14 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 import { greeting, welcome } from './welcome';
 
-const LEVEL_COUNT = 3;
+const levelCount = 3;
 
 const gameTemplate = (questionPairGenerate, gameDescription) => {
   welcome();
   console.log(gameDescription);
   const userName = greeting();
 
-  for (let i = 0; i < LEVEL_COUNT; i += 1) {
+  for (let i = 0; i < levelCount; i += 1) {
     const questionPair = questionPairGenerate();
     const question = car(questionPair);
     const answer = cdr(questionPair);
