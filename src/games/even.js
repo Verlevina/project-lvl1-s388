@@ -14,4 +14,8 @@ const generateGameData = () => {
   return cons(question, trueAnswer);
 };
 
-export default () => gameTemplate(generateGameData, description);
+const startGame = () => {
+  gameTemplate(generateGameData, description);
+};
+
+export default startGame;

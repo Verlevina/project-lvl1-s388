@@ -13,17 +13,19 @@ const generateGameData = () => {
   const step = getRandomNumber(min, max);
   let question = '';
   let answer;
-  let progressionValue = startProgression;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === questionPosition) {
-      answer = progressionValue.toString();
+      answer = (startProgression + step * i).toString();
       question += ' .. ';
     } else {
-      question += ` ${progressionValue} `;
+      question += ` ${startProgression + step * i} `;
     }
-    progressionValue += step;
   }
   return cons(question, answer);
 };
 
-export default () => gameTemplate(generateGameData, description);
+const startGame = () => {
+  gameTemplate(generateGameData, description);
+};
+
+export default startGame;

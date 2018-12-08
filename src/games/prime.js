@@ -2,17 +2,27 @@ import { cons } from 'hexlet-pairs';
 import gameTemplate from '../game-template';
 import getRandomNumber from '../utils';
 
-const min = 1;
-const max = 100;
+const min = -2;
+const max = 90;
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  for (let i = 2; i < number / 2; i += 1) {
+  if (number <= 1) {
+    return false;
+  }
+  if (number % 2 === 0) {
+    return false;
+  }
+  let i = 3;
+  let flag = true;
+  while (i <= Math.sqrt(number) && flag) {
     if (number % i === 0) {
-      return false;
+      flag = false;
+    } else {
+      i += 2;
     }
   }
-  return true;
+  return flag;
 };
 
 const generateGameData = () => {
@@ -21,4 +31,8 @@ const generateGameData = () => {
   return cons(question, trueAnswer);
 };
 
-export default () => gameTemplate(generateGameData, description);
+const startGame = () => {
+  gameTemplate(generateGameData, description);
+};
+
+export default startGame;

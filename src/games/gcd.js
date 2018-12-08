@@ -11,7 +11,7 @@ const findgcd = (firstNumber, secondNumber) => {
   let gcd;
   for (let i = minNumber; i > 0; i -= 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
-      gcd = i.toString();
+      gcd = i;
       break;
     }
   }
@@ -22,8 +22,12 @@ const generateGameData = () => {
   const firstNumber = getRandomNumber(min, max);
   const secondNumber = getRandomNumber(min, max);
   const question = ` ${firstNumber} ${secondNumber}`;
-  const trueAnswer = findgcd(firstNumber, secondNumber);
+  const trueAnswer = findgcd(firstNumber, secondNumber).toString();
   return cons(question, trueAnswer);
 };
 
-export default () => gameTemplate(generateGameData, description);
+const startGame = () => {
+  gameTemplate(generateGameData, description);
+};
+
+export default startGame;
